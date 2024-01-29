@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cfd50280ac.js" crossorigin="anonymous"></script>
+
+    <style>
+        @media only screen and (max-width:480px){
+body{
+    margin: 0px;
+}
+            
+  .div--1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+    padding-bottom: 20px;
+    width: 350px;
+    margin: 50px 35px;
+    padding: 30px 0px;
+    border-radius: 8px;
+
+
+  }
+   .button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  .base64-output{
+        height: 100px;
+        width: 300px;
+        resize: none;
+        text-align: center;
+        margin-top: 30px;
+        background-color: #e4e8ec;
+  }
+    
+.base64-input{  
+        height: 100px;
+        width: 300px;
+        resize: none;
+        text-align: center;
+        margin-top: 30px;
+        background-color: #e4e8ec;
+  }
+  .div--2{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .div--3{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+.div-0{
+        border: 2px solid rgb(151, 146, 146);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        align-items: center;
+        padding-top: 5px;
+    }
+    .img-1{
+        width: 130px;
+        height: 40px;
+        border-radius: 6px;
+    }    
+.div-5{
+    font-size: 25px;
+  }
+  .div-3{
+    background-color: #132743;
+    margin-top: 2px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  }
+
+  .span-1{
+    color: white;
+    font-size: 20px;
+  }
+  .div-4 a{
+    color: white;
+    margin-left: 10px;
+    font-size: 25px;
+
+  }
+  .div-4 {
+    margin-top: 20px;
+    
+
+  }
+  .div-3 a{
+    color: rgb(55, 144, 246);
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+
+
+
+
+.dropbtn:hover, .dropbtn:focus {
+    border: 2px solid rgb(216, 214, 214) ;
+    padding: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+        }
+    </style>
+</head>
+<body>
+    <div class="div-0">
+        <div><img class="img-1" src="smt.jpg" alt=""></div>
+        <div onclick="myFunction()" class="div-5 dropdown"><i class="fa-solid fa-bars ii-1 dropbtn"></i>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a></div>
+          </div>
+    </div>   
+    <div class="div--1">
+        <div class="div--2">
+            <input class="inp___1" type="file">
+            <textarea class="base64-output" placeholder="Encoded base64"></textarea>
+            <button class="button-85" onclick="encod1()">Encode</button>
+            
+
+        </div>
+        <div class="div--3">
+            <textarea class="base64-input" placeholder="Enter base64 to decode"></textarea>
+            <button class="button-85" onclick="encod2()">Decode</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="div-3">
+            <span>
+               <span class="span-1">design by :</span> <a href="https://www.facebook.com/profile.php?id=100089667051639&mibextid=ZbWKwL">Md Anisur Rahman</a>
+            </span>
+            <div class="div-4">
+                <a href="https://www.facebook.com/profile.php?id=100089667051639&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-regular fa-envelope"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+<script>
+    let enc_file = document.querySelectorAll('.div--2 input')[0]
+    let enc_text = document.querySelectorAll('.div--2 input')[1]
+    let base64Output = document.querySelector('.div--2 .base64-output')
+
+    let dec_text = document.querySelector('.div--3 textarea')
+    let dec_button = document.querySelector('.div--3 button')
+
+
+    function encod1()  {
+        if(enc_file.value !== '' || enc_text.value !== ''){
+
+            if(enc_file.value !== ''){
+                base64Encoder(enc_file.files[0])
+            }else{
+
+                const http = new XMLHttpRequest();
+                http.onload = () => {
+
+                    base64Encoder(http.response)
+                }
+                http.responseType = 'blob'
+                http.open('GET', enc_text.value, true)
+                http.send()
+            }
+        }
+    }
+
+
+    function base64Encoder(blob){
+
+        var reader = new FileReader();
+        reader.readAsDataURL(blob)
+        reader.onloadend = () => {
+            base64Output.innerHTML = reader.result
+        }
+    }
+
+
+    function encod2() {
+        if(dec_text.value !== ''){
+            base64Decoder(dec_text.value)
+        }
+    }
+
+
+    function base64Decoder(base64){
+
+        const http = new XMLHttpRequest();
+        http.onload = () => {
+
+            var url = window.URL.createObjectURL(http.response)
+            var link = document.createElement('a')
+            link.href = url
+            link.download = 'image-from-base64.png'
+            link.click()
+        }
+        http.responseType = 'blob'
+        http.open('GET', base64, true)
+        http.send()
+    }
+
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>

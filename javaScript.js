@@ -120,3 +120,80 @@
   
   }
   encodeStr();
+
+  
+function clearData(){
+  document.getElementById('textarea1').value= '';
+}
+
+
+function copyText() {
+  var input = document.getElementById('textarea1');
+
+  if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+    // handle iOS devices
+    input.contenteditable = true;
+    input.readonly = false;
+
+    var range = document.createRange();
+    range.selectNodeContents(input);
+
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    input.setSelectionRange(0, 999999);
+  } else {
+    // other devices are easy
+    input.select()
+  }
+  document.execCommand('copy');
+}
+
+
+function clearData1(){
+  document.getElementById('textarea2').value= '';
+}
+
+
+function copyText1() {
+  let inp1ut = document.getElementById('textarea2');
+
+  if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+    // handle iOS devices
+    inp1ut.contenteditable = true;
+    inp1ut.readonly = false;
+
+    var ran1ge = document.createRange();
+    ran1ge.selectNodeContents(inp1ut);
+
+    var selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(ran1ge);
+    inp1ut.setSelectionRange(0, 999999);
+  } else {
+    // other devices are easy
+    inp1ut.select()
+  }
+  document.execCommand('copy');
+}
+
+
+function encodSter() {
+	const str = document.getElementById('textarea1').value;
+    console.log(btoa(str));
+    let x = btoa(str);
+    document.getElementById('textarea2').innerText=x;
+
+}
+encodSter();
+
+
+function decodeSter() {
+	const str2 = document.getElementById('textarea1').value;
+    console.log(atob(str2));
+    let u = atob(str2);
+    document.getElementById('textarea2').innerText=u;
+
+}
+encodeStr();
+

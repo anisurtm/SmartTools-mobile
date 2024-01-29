@@ -11,12 +11,33 @@
     <section class="section-1">
         <div class="div-0">
             <div><img class="img-1" src="smt.jpg" alt=""></div>
-            <div class="div-5"><i class="fa-solid fa-bars ii-1"></i></div>
+            <div onclick="myFunction()" class="div-5 dropdown"><i class="fa-solid fa-bars ii-1 dropbtn"></i>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a></div>
+                  </div>
         </div>
         <div class="div-1">
             <h2 class="h2-1">Text Converter</h2>
             <textarea id="textarea1" placeholder="Write your text or Past your text"></textarea>
+            <div class="div-6">
+                <div onclick="copyText()" class="span14 tooltip">
+                    <i class="fa-regular fa-copy"></i><span class="tooltiptext">Copy</span>
+                  </div>
+                  <div onclick="clearData()" id="idSpan-14" class="span14 tooltip">
+                    <i class="fa-solid fa-x"></i><span class="tooltiptext">Clear?</span>
+                  </div>
+            </div>
             <span ><textarea  id="textarea2" placeholder="Result" ></textarea></span>
+            <div class="div-6">
+                <div onclick="copyText1()" class="span14 tooltip">
+                    <i class="fa-regular fa-copy"></i><span class="tooltiptext">Copy</span>
+                  </div>
+                  <div onclick="clearData1()" id="idSpan-14" class="span14 tooltip">
+                    <i class="fa-solid fa-x"></i><span class="tooltiptext">Clear?</span>
+                  </div>
+            </div>
         </div>
         <div class="div-2">
             <button class="button-85" onclick="tOGGLEc()" id="button-15">tOGGLE cASE</button>
@@ -32,18 +53,19 @@
         <div>
             <button class="button-85" onclick="encodSter()" id="button-20">Encoding</button>
             <button class="button-85" onclick="decodeSter()" id="button-20">Decoding</button>
-            <button class="button-85" onclick="aLtErNaTe()" id="button-20">Image Encoding</button>
-            <button class="button-85" onclick="aLtErNaTe()" id="button-20">Image Decoding</button>
+            <a href="imagecoading.html"><button class="button-85" onclick="aLtErNaTe()" id="button-20">Image Encoding</button></a>
+            
+            <!-- <button class="button-85" onclick="aLtErNaTe()" id="button-20">Image Decoding</button> -->
         </div>
     </section>
 
     <footer>
         <div class="div-3">
             <span>
-               <span class="span-1">Design :</span> <a href="">Md Anisur Rahman</a>
+               <span class="span-1">design by :</span> <a href="https://www.facebook.com/profile.php?id=100089667051639&mibextid=ZbWKwL">Md Anisur Rahman</a>
             </span>
             <div class="div-4">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100089667051639&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-regular fa-envelope"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
@@ -52,5 +74,25 @@
         </div>
     </footer>
     <script src="javaScript.js"></script>
+    <script>
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+    </script>
 </body>
 </html>
