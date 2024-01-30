@@ -178,22 +178,3 @@ function copyText1() {
 }
 
 
-function encodSter() {
-	const str = document.getElementById('textarea1').value;
-    console.log(btoa(str));
-    let x = btoa(str);
-    document.getElementById('textarea2').innerText=x;
-
-}
-encodSter();
-
-
-function decodeSter() {
-	const str2 = document.getElementById('textarea1').value;
-    console.log(atob(str2));
-    let u = atob(str2);
-    document.getElementById('textarea2').innerText=u;
-
-}
-encodeStr();
-
