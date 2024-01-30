@@ -110,7 +110,6 @@
       document.getElementById('textarea2').innerText=x;
   
   }
-  encodSter();
   
           function decodeSter() {
     const str2 = document.getElementById('textarea1').value;
