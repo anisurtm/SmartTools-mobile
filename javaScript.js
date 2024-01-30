@@ -107,7 +107,7 @@
     const str = document.getElementById('textarea1').value;
       console.log(btoa(str));
       let x = btoa(str);
-      document.getElementById('textarea2').innerText=x;
+      document.getElementById('textarea2').value=x;
   
   }
   
@@ -115,7 +115,9 @@
     const str2 = document.getElementById('textarea1').value;
       console.log(atob(str2));
       let u = atob(str2);
-      document.getElementById('textarea2').innerText=u;
+      console.log(u);
+      document.getElementById('textarea2').value=u;
+      console.log(document.getElementById('textarea2').value);
   
   }
 
